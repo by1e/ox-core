@@ -6,6 +6,6 @@ package cn.by1e.ox.core.util;
  */
 public class OxUtils {
 
-    
+
 
 }
