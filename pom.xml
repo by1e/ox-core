@@ -4,9 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>cn.by1e.ox</groupId>
-        <artifactId>ox-pom</artifactId>
-        <!--<version>1.0.0</version>-->
+        <groupId>cn.by1e.na</groupId>
+        <artifactId>na-bom</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
