@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 public class AssertUtils {
 
-    public static void isNotNull(Object obj) {
+    public static void notNull(Object obj) {
         if (Objects.isNull(obj)) {
             throw new IllegalArgumentException("obj is null");
         }

@@ -1,6 +1,7 @@
 package cn.by1e.ox.core.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 /**
  * @author bangquan.qian
@@ -9,6 +10,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ConsoleUtils {
 
     private static final ObjectMapper mapper = new ObjectMapper();
+
+    static {
+        mapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
+    }
 
     public static void prettyJsons(Object... objs) {
         prettyJson(objs);
