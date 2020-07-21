@@ -31,7 +31,12 @@ public class ConsoleUtils {
         sout(InvokeUtils.invokeRe(() -> mapper.writeValueAsString(objs)));
     }
 
+    public static void souts(Object... objs) {
+        sout(objs);
+    }
+
     public static void sout(Object obj) {
         System.out.println(obj);
     }
+
 }
