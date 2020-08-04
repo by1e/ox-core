@@ -3,8 +3,7 @@ package cn.by1e.ox.core.util;
 import cn.by1e.ox.core.internal.Invoker;
 import cn.by1e.ox.core.internal.VoidInvoker;
 
-import java.util.function.Consumer;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 
 /**
  * @author bangquan.qian
@@ -45,4 +44,19 @@ public class InvokeUtils {
         return operator.apply(t);
     }
 
+    public static <R, T> R function(T t, Function<T, R> function) {
+        return function.apply(t);
+    }
+
+    public static <T> void consume(T t, Consumer<T> consumer) {
+        consumer.accept(t);
+    }
+
+    public static <T> T supply(Supplier<T> supplier) {
+        return supplier.get();
+    }
+
+    public static <T> boolean predicate(T t, Predicate<T> predicate) {
+        return predicate.test(t);
+    }
 }
