@@ -30,4 +30,8 @@ public class ConsoleUtils {
         System.out.println(obj);
     }
 
+    public static void sout() {
+        System.out.println();
+    }
+
 }
