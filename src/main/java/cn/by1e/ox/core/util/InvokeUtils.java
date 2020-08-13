@@ -18,6 +18,8 @@ public class InvokeUtils {
     public static void voidInvokeRe(VoidInvoker invoker) {
         try {
             voidInvoke(invoker);
+        } catch (RuntimeException e) {
+            throw e;
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
@@ -30,6 +32,8 @@ public class InvokeUtils {
     public static <T> T invokeRe(Invoker<T> invoker) {
         try {
             return invoke(invoker);
+        } catch (RuntimeException e) {
+            throw e;
         } catch (Throwable e) {
             throw new RuntimeException(e);
         }
