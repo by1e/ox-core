@@ -73,9 +73,22 @@ public class ChainedExecutors {
     public static class ResultItem {
         private int res = ResultMode.SUCCESS.mode;
 
-        private int idx = 0;
-
         private Throwable e = null;
+
+        /**
+         * @see InvokerJob#index
+         */
+        private int index = 0;
+
+        /**
+         * @see InvokerJob#type
+         */
+        private int type;
+
+        /**
+         * @see InvokerJob#mode
+         */
+        private int mode;
     }
 
     public static class Result {
@@ -222,7 +235,7 @@ public class ChainedExecutors {
                     future.get(MAX_TIMEOUT_SECONDS, TimeUnit.SECONDS);
                 } catch (Throwable e) {
                     ResultItem item = new ResultItem();
-                    item.res = ResultMode.BIZ_ERR.mode;
+                    item.res = ResultMode.OTR_ERR.mode;
                     item.e = e;
                     details.add(item);
                     throw e instanceof RuntimeException ? (RuntimeException) e : new RuntimeException(e);
@@ -249,7 +262,9 @@ public class ChainedExecutors {
         private ResultItem invokeInvoker(List<ResultItem> details, InvokerJob job, Throwable e) {
             ResultItem item = new ResultItem();
             item.res = ResultMode.SUCCESS.mode;
-            item.idx = job.index;
+            item.index = job.index;
+            item.mode = job.mode;
+            item.type = job.type;
             details.add(item);
             try {
                 if (e == null) {
