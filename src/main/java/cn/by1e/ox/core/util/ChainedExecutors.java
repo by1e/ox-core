@@ -238,7 +238,7 @@ public class ChainedExecutors {
                     item.res = ResultMode.OTR_ERR.mode;
                     item.e = e;
                     details.add(item);
-                    throw e instanceof RuntimeException ? (RuntimeException) e : new RuntimeException(e);
+                    // throw e instanceof RuntimeException ? (RuntimeException) e : new RuntimeException(e);
                 }
             }
         }
