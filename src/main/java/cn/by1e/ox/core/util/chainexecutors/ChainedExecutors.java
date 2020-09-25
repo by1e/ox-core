@@ -1,4 +1,4 @@
-package cn.by1e.ox.core.util;
+package cn.by1e.ox.core.util.chainexecutors;
 
 import cn.by1e.ox.core.internal.VoidInvoker;
 

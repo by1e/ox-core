@@ -1,6 +1,6 @@
 package cn.by1e.ox.core.test;
 
-import cn.by1e.ox.core.util.ChainedExecutors;
+import cn.by1e.ox.core.util.chainexecutors.ChainedExecutors;
 import cn.by1e.ox.core.util.ConsoleUtils;
 import org.junit.Test;
 
