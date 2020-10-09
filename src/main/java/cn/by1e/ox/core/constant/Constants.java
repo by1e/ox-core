@@ -8,4 +8,8 @@ public interface Constants {
 
     String UNCHECKED = "unchecked";
 
+    String RAW_TYPE = "rawtype";
+
+    String TIME_PATTERN = "yyyy-MM-dd HH:mm:ss.SSS";
+
 }
